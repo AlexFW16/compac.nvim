@@ -25,9 +25,9 @@ function M.toggle_visual()
   for l = start_line, end_line do
     local line = vim.fn.getline(l)
     if line:match("^%s*//") then
-      vim.api.nvim_set_current_line(line:gsub("^(%s*)//%s?", "%1"))
+      vim.fn.setline(l, line:gsub("^(%s*)//%s?", "%1"))
     else
-      vim.api.nvim_set_current_line("// " .. line)
+      vim.fn.setline(l, "// " .. line)
     end
   end
 end
