@@ -7,7 +7,6 @@ function M.setup()
     pattern = "compacdsl",
     callback = function()
       vim.bo.commentstring = "// %s"
-
-      vim.keymap
-    end
+    end,
   })
+end
